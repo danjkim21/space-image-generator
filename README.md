@@ -24,4 +24,4 @@ Daniel Kim - [@devdanielk](https://twitter.com/devdanielk) - dan.jkim21@gmail.co
 
 Project Link: [https://github.com/danjkim21/space-image-generator](https://github.com/danjkim21/space-image-generator) 
 <br>
-Github Live Page: [danjkim21.github.io/mygym-app/](https://danjkim21.github.io/space-image-generator/)
+Github Live Page: [https://danjkim21.github.io/space-image-generator/](https://danjkim21.github.io/space-image-generator/)
