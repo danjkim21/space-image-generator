@@ -17,20 +17,28 @@ function getPictureOfTheDay() {
             // console log the object
             console.log(data)
 
-            // change h2 to title of image
-            document.querySelector('h1').innerHTML = data.title;
-            // change img src to hd url of image
-            // document.querySelector('img').src = data.hdurl;
+            // Conditional if there is a image title
+            if (!data.title) {
+                document.querySelector('h1').innerHTML = "";
+            } else {
+                // change h2 to title of image
+                document.querySelector('h1').innerHTML = data.title;
+                // add image title to description title
+                document.querySelector('.imgTitle').innerHTML = data.title;
+            }
+
             // add date to explanation 
             document.querySelector('.dateHere').innerHTML = data.date;
-
-            // add image title to description title
-            document.querySelector('.imgTitle').innerHTML = data.title;
             // add description to explanation
             document.querySelector('.explanation').innerHTML = data.explanation;
-            // add copyright description to copyright
-            document.querySelector('.copyright').innerHTML = data.copyright;
-
+            
+            // Conditional if there is a copyright person
+            if (!data.copyright) {
+                document.querySelector('.copyright').innerHTML = "";
+            } else {
+                // add copyright description to copyright
+                document.querySelector('.copyright').innerHTML = data.copyright;
+            }
 
             // Figure out how to control for videos see date 2021-02-03: use conditional and use iframe in html
             if (data.media_type === 'image') {
