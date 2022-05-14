@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <title>NASA Photo of the Day</title>
 
-		<title>NASA Photo of the Day</title>
+    <!-- external CSS link -->
+    <script
+      src="https://kit.fontawesome.com/a2f02755e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Nav Bar Content - Title and Input/Button -->
+      <section class="flexBox">
+        <a href="#">NASA Photo Generator</a>
+        <section>
+          <input
+            class="myInput"
+            type="date"
+            name=""
+            value=""
+            min="1995-06-16"
+          />
+          <button class="myButton" type="button" name="button">
+            Get Image
+          </button>
+        </section>
+      </section>
 
-		<!-- external CSS link -->
-		<script src="https://kit.fontawesome.com/a2f02755e4.js" crossorigin="anonymous"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<main>
-			<section class="flexBox"> 
-				<a href="#">NASA Photo Generator</a>
-				<section>
-					<input class="myInput" type="date" name="" value="" min="1995-06-16">
-					<button class="myButton" type="button" name="button">Get Image</button>
-				</section>
-			</section>
-			
+      <!-- Hero Text - Changes on new date selection -->
+      <h1 class="hero-text">
+        <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span
+        ><span>r</span><span>e</span><span>.</span>
+      </h1>
 
-			<h1 class="hero-text">
-				<span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>e</span><span>.</span>
-			</h1>
+      <!-- Text that lets user know to scroll to see more information about image -->
+      <section class="teaser hidden">
+        <span><i class="fa-solid fa-arrow-left-long"></i> Learn More</span>
+      </section>
 
+      <!-- caption that notes image date -->
+      <section class="sideDescription">
+        <p class="dateHere"></p>
+      </section>
+    </main>
 
-			<section class="teaser hidden"><span><i class="fa-solid fa-arrow-left-long"></i>  Learn More</span></section>
+    <!-- Section that appears after selecting date providing brief description of image -->
+    <section class="description hidden">
+      <!-- Image title description -->
+      <span><h2 class="imgTitle"></h2></span>
+      <iframe class="hidden" src="" frameborder="0"></iframe>
 
-			<section class="sideDescription">
-				<p class="dateHere"></p>
-			</section>
-		</main>
+      <!-- Image explanation and copyright info -->
+      <p class="explanation"></p>
+      <p class="copyright"></p>
+      <a class="getImgBtn" href="" target="_blank">Get HD Image</a>
+    </section>
 
-		<section class="description hidden">
-			<span><h2 class="imgTitle"></h2></span>
-			<iframe class="hidden" src="" frameborder="0"></iframe>
-			<p class="explanation"></p>
-			<p class="copyright"></p>
-		</section>
-		
-
-			
-			
-		
-
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
