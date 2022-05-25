@@ -1,6 +1,6 @@
 ## About Space Image Generator
 
-This project generates a new background image from NASA's popular (Astronomy Picture of the Day API)[https://api.nasa.gov/] and provides a brief description of the image. The goal was to make a simple yet elegent web application that made navigating the APOD API a smooth and perhaps calming experience.
+This project generates a new background image from NASA's popular [Astronomy Picture of the Day (APOD) API](https://api.nasa.gov/) and provides a brief description of the image. The goal was to make a simple yet elegent web application that made navigating the APOD API a smooth and perhaps calming experience.
 
 <p align="center">
   <img src="img/space-tool-demo-min.gif" width="75%" alt="space app recording"/>
@@ -19,7 +19,7 @@ I learned a lot of new css styling techniques like :before, :after, keyframes th
 ## Roadmap
 
 - [x] Fully draft README
-- [ ] Mobile responsiveness
+- [x] Mobile responsiveness
 - [ ] Test and support video functionality
 
 
