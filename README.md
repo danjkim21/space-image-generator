@@ -1,6 +1,8 @@
-## About Space Image Generator
+## About Calm. Space Generator
 
-This project generates a new background image from NASA's popular [Astronomy Picture of the Day (APOD) API](https://api.nasa.gov/) and provides a brief description of the image. The goal was to make a simple yet elegent web application that made navigating the APOD API a smooth and perhaps calming experience.
+Space. It's pretty darn cool! As a city kid, there have only been a handful of times where I got the chance to look up and say, "Now **that** is pretty darn cool!" There's a certain sense of bittersweet-ness, knowing that you'll never really be able to capture that calming pause in time and imagery without being some sort of master photography whiz. 
+
+This project generates a new background image from NASA's popular [Astronomy Picture of the Day (APOD) API](https://api.nasa.gov/) each day, and provides a brief description of the image. The goal was to make a simple yet elegent web application that provides a smooth and maybe even calming experience. 
 
 <p align="center">
   <img src="img/space-tool-demo-min.gif" width="75%" alt="space app recording"/>
@@ -8,7 +10,7 @@ This project generates a new background image from NASA's popular [Astronomy Pic
 
 ## How It's Made
 
-**Tech used:** HTML, CSS, JavaScript. <br>
+**Tech used:** HTML, CSS, JavaScript, APOD API. <br>
 
 
 ## Lessons Learned:
@@ -20,7 +22,8 @@ I learned a lot of new css styling techniques like :before, :after, keyframes th
 
 - [x] Fully draft README
 - [x] Mobile responsiveness
-- [ ] Test and support video functionality
+- [x] Test and support video functionality
+- [ ] Refactor files
 
 
 <!-- CONTACT -->

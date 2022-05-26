@@ -7,17 +7,24 @@
   box-sizing: border-box;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
+/* flex box */
+.flexBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* General */
 * {
   color: #ffffffcc;
   font-family: 'Source Sans Pro', sans-serif;
 }
+h2 {
+  font-weight: 400;
+}
 body {
   background-color: #111219;
 }
-
 p {
   line-height: 1.5;
 }
@@ -31,6 +38,20 @@ p {
   text-transform: uppercase;
 }
 
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* Hero Main Section Styling*/
+main {
+  position: relative;
+  text-align: center;
+  background: center
+    url(https://images.unsplash.com/photo-1598585774711-f7638e3e3520?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2655&q=80);
+  background-size: cover;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+}
 .hero-text {
   font-family: Libre Baskerville, Serif;
   font-weight: 400;
@@ -43,7 +64,6 @@ p {
   font-size: 80px;
   line-height: 99px;
   letter-spacing: -2px;
-
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -52,6 +72,119 @@ p {
   font-weight: 400;
   color: #ffffffbf;
 }
+.teaser {
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  left: -110px;
+  padding: 20px 20px 20px 200px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.sideDescription {
+  z-index: 2;
+  position: absolute;
+  bottom: 65px;
+  right: 50px;
+  font-size: 16px;
+  color: #ffffffcc;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.flexBox:after {
+  z-index: 1;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  background: linear-gradient(180deg, rgba(20, 22, 30, 0), #111219);
+  mix-blend-mode: normal;
+}
+
+/* Description Section Styling */
+.description {
+  height: 675px;
+  background-color: #111219;
+  padding: 15vh 15vw 10vh 15vw;
+}
+.imgTitle {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.imgTitle {
+  padding-bottom: 2rem;
+}
+.explanation {
+  padding-bottom: 2rem;
+}
+/* Iframe - Youtube Video Container Styling */
+.videoContainer {
+  height: 300px;
+}
+.iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Inputs & btns */
+input {
+  background-color: #0d1314b0;
+  border: 1px solid transparent;
+  height: 50px;
+  width: 165px;
+  padding: 10px 17.5px;
+  border-radius: 10px;
+  color-scheme: dark;
+  margin-right: 20px;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+input:hover {
+  background-color: #111219;
+}
+button {
+  background-color: #0d1314b0;
+  border: 1px solid transparent;
+  height: 50px;
+  width: 150px;
+  padding: 10px 17.5px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #111219;
+  cursor: pointer;
+}
+
+/* Hero Text animations */
 @keyframes scale {
   100% {
     transform: scale(1);
@@ -123,127 +256,7 @@ span:nth-child(18) {
   }
 }
 
-h2 {
-  font-weight: 400;
-}
-
-main {
-  position: relative;
-  text-align: center;
-  background: center
-    url(https://images.unsplash.com/photo-1598585774711-f7638e3e3520?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2655&q=80);
-  background-size: cover;
-  overflow: hidden;
-  min-height: 100vh;
-  padding: 2.5vh 2.5vw 2.5vh 2.5vw;
-}
-
-.flexBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.teaser {
-  position: absolute;
-  z-index: 2;
-  bottom: 15px;
-  left: -110px;
-  padding: 20px 20px 20px 200px;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transform: rotate(-90deg);
-  user-select: none;
-  -webkit-user-select: none;
-  cursor: default;
-}
-.sideDescription {
-  z-index: 2;
-  position: absolute;
-  bottom: 65px;
-  right: 50px;
-  font-size: 16px;
-  color: #ffffffcc;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.flexBox:after {
-  z-index: 1;
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40vh;
-  background: linear-gradient(180deg, rgba(20, 22, 30, 0), #111219);
-  mix-blend-mode: normal;
-}
-
-.imgTitle {
-  font-weight: 400;
-  font-size: 2rem;
-}
-.description {
-  height: 675px;
-  background-color: #111219;
-  padding: 15vh 15vw 10vh 15vw;
-}
-.imgTitle {
-  padding-bottom: 2rem;
-}
-.explanation {
-  padding-bottom: 2rem;
-}
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
-.hidden {
-  display: none;
-}
-input {
-  background-color: #0d1314b0;
-  border: 1px solid transparent;
-  height: 50px;
-  width: 165px;
-  padding: 10px 17.5px;
-  border-radius: 10px;
-  color-scheme: dark;
-  margin-right: 20px;
-  transition: background-color 0.2s ease-in-out;
-
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-input:hover {
-  background-color: #111219;
-}
-
-button {
-  background-color: #0d1314b0;
-  border: 1px solid transparent;
-  height: 50px;
-  width: 150px;
-  padding: 10px 17.5px;
-  border-radius: 10px;
-  transition: background-color 0.2s ease-in-out;
-
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-button:hover {
-  background-color: #111219;
-  cursor: pointer;
-}
-
+/* Media Queries */
 @media screen and (max-width: 645px) {
   .hero-text {
     padding: 75px 20px 20px 20px;

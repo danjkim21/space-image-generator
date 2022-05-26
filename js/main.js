@@ -8,13 +8,11 @@ function getPictureOfTheDay() {
   let date = document.querySelector('input').value;
 
   // requesting data from a server via a URL API and specifying specific image date in the url
-
   fetch(
     `https://api.nasa.gov/planetary/apod?api_key=1a3gGVcYGA19BfITQHuUIjIz00FnSpe12dqV3EKh&date=${date}`
   )
     // parse response as JSON
     .then((res) => res.json())
-
     .then((data) => {
       // console log the object
       console.log(data);
@@ -36,6 +34,9 @@ function getPictureOfTheDay() {
       // add link to href of full image button
       document.querySelector('.getImgBtn').href = data.hdurl;
 
+      document.querySelector('.description').classList.remove('hidden');
+      document.querySelector('.teaser').classList.remove('hidden');
+
       // Conditional if there is a copyright person
       if (!data.copyright) {
         document.querySelector('.copyright').innerHTML = '';
@@ -44,24 +45,22 @@ function getPictureOfTheDay() {
         document.querySelector('.copyright').innerHTML = data.copyright;
       }
 
-      // Figure out how to control for videos see date 2021-02-03: use conditional and use iframe in html
+      // Conditional for different media inputs (Images vs Videos)
       if (data.media_type === 'image') {
         // document.getElementById("myDiv").style.backgroundImage = "url('img_tree.png')";
-        document.querySelector(
-          'main'
-        ).style.backgroundImage = `url('${data.url}')`;
+        document.querySelector('main').style.backgroundImage = `url('${data.url}')`;
         // document.querySelector('img').src = data.hdurl;
         // document.querySelector('iframe').src = '';
+        
       } else if (data.media_type === 'video') {
-        document.querySelector('iframe').src = data.url;
-        document.querySelector('img').src = '';
-        document.querySelector('iframe').classList.remove('hidden');
-      }
+        document.querySelector('.videoContainer').classList.remove('hidden');
+        // document.querySelector('iframe').src = data.url;
+        document.querySelector('.videoContainer').innerHTML = `<iframe class="iframe" src="${data.url}" frameborder="0"></iframe>`;
 
-      document.querySelector('.description').classList.remove('hidden');
-      document.querySelector('.teaser').classList.remove('hidden');
+        // document.querySelector('img').src = '';
+      }
     })
 
     // promise
-    .catch((err) => console.log('error ${err}'));
+    .catch((err) => console.log(`error ${err}`));
 }
